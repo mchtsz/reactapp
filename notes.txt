@@ -1,0 +1,22 @@
+/* Her er ideer for hva jeg skal gjøre, og fullføre. */
+
+Funksjoner jeg må legge til Headless Woo.
+
+- Legg til handlekurv knapp
+
+- Flere sider (Routes system i react)
+
+- Paginering 
+
+- Filtrering (Filtrer varer, filtrer kategori)
+
+- Handlekurv 
+
+
+Next - Page
+
+[LEGG TIL]
+
+[FILTER VARER]
+
+Home | Products | Cart | Contact 
