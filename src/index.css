@@ -1,7 +1,7 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -9,14 +9,14 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
-.App  {
-display: flex;
-flex-direction: column;
-min-height: 100vh;
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .section {
@@ -45,7 +45,7 @@ min-height: 100vh;
   display: none;
 }
 
-.productGrid{
+.productGrid {
   display: grid;
   justify-content: center;
   grid-template-columns: repeat(2, 1fr);
@@ -55,7 +55,7 @@ min-height: 100vh;
 }
 
 .product {
-  display:flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
@@ -71,8 +71,8 @@ min-height: 100vh;
   cursor: pointer;
 }
 
-.product-title{
-  color:#383838;
+.product-title {
+  color: #383838;
   user-select: none;
   font-size: 24px;
   margin-bottom: 6px;
@@ -89,7 +89,7 @@ min-height: 100vh;
 }
 
 @media only screen and (max-width: 1200px) {
-  .productGrid{
+  .productGrid {
     grid-template-columns: repeat(2, 1fr);
     grid-auto-columns: max-content;
     margin: auto;
@@ -105,7 +105,7 @@ min-height: 100vh;
 }
 
 @media only screen and (max-width: 800px) {
-  .productGrid{
+  .productGrid {
     grid-template-columns: repeat(1, 1fr);
     grid-auto-columns: max-content;
     margin: auto;
