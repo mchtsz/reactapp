@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link, useMatch, useResolvedPath } from 'react-router-dom'
+import { BsFillCartFill } from "react-icons/bs";
 import './Navbar.css'
 
 
@@ -14,18 +15,14 @@ const Navbar = ({setSearchQuery, searchQuery}) => {
           <input type="text" placeholder="Search for product" 
           onChange={
             (e)=> {
-              setSearchQuery(e.target.value)
-              
+              setSearchQuery(e.target.value) 
             }} 
             value={searchQuery}/>
         </div>
       </div>
 
       <ul className="menu-list">
-        <CustomLink to="/">Home</CustomLink>
-        <CustomLink to="/products">Products</CustomLink>
-        <CustomLink to="/cart">Cart</CustomLink>
-        <CustomLink to="/contact">Contact</CustomLink>
+        <CustomLink to="/cart" className="menu-cart"><BsFillCartFill/><span>0</span></CustomLink>
       </ul>
     </nav>
   )

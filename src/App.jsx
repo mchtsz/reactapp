@@ -4,10 +4,7 @@ import Pagination from "./components/Pagination"
 import Addbtn from "./components/Addbtn"
 import { useState, useEffect } from "react"
 import { Route, Routes } from "react-router-dom"
-import Home from "./pages/Home"
-import Products from "./pages/Products"
 import Cart from "./pages/Cart"
-import Contact from "./pages/Contact"
 
 function App() {
   const [displayableProducts, setDisplayableProducts] = useState([])
@@ -60,10 +57,7 @@ function App() {
         <div className="nav">
           <Navbar setSearchQuery={setSearchQuery} searchQuery={searchQuery} />
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/products" element={<Products />} />
             <Route path="/cart" element={<Cart />} />
-            <Route path="/contact" element={<Contact />} />
           </Routes>
         </div>
 
