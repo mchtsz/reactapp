@@ -26,7 +26,7 @@ const Navbar = ({ setSearchQuery, searchQuery }) => {
         <div className="search-bar">
           <input
             type="text"
-            placeholder="Search for product"
+            placeholder="Søk etter produkt"
             onChange={(e) => {
               setSearchQuery(e.target.value);
             }}

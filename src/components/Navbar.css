@@ -78,15 +78,17 @@
 }
 
 @media only screen and (max-width: 1000px) {
-    .navbar .menu-list {
-        display: none;
-    }
-
-    .navbar {
-        flex-direction: column;
-    }
-
-    .navbar .site-title {
-        margin-bottom: 15px;
-    }
+  .navbar .menu-list {
+    display: none;
   }
+
+  .navbar {
+    flex-direction: column;
+  }
+
+  .navbar .site-title {
+    margin-bottom: 15px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
