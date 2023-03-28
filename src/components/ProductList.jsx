@@ -1,14 +1,15 @@
 import { useEffect, useState } from "react";
 import Pagination from "./Pagination";
-import { useContext } from "react";
-import CartContext from "../CartContext";
+import { addItemToCart } from "../state/cartSlice";
 import Addbtn from "./Addbtn";
+import { useDispatch } from "react-redux";
 
 export default function ProductList({ searchQuery, handleCount }) {
+  const dispatch = useDispatch();
+
   const [displayableProducts, setDisplayableProducts] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage] = useState(4);
-  const cartContext = useContext(CartContext);
 
   const lastPostIndex = currentPage * postsPerPage;
   const firstPostIndex = lastPostIndex - postsPerPage;
@@ -52,15 +53,17 @@ export default function ProductList({ searchQuery, handleCount }) {
           <div
             key={product.id}
             className="product"
-            onClick={() =>
-              cartContext.addToCart(
-                product.id,
-                product.name,
-                1,
-                product.price,
-                product.images[0].src
-              )
-            }
+            onClick={() => {
+              dispatch(
+                addItemToCart({
+                  id: product.id,
+                  quantity: 1,
+                  name: product.name,
+                  price: product.price,
+                  img: product.images[0].src,
+                })
+              );
+            }}
           >
             <div className="products-container">
               <img

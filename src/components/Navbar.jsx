@@ -1,19 +1,13 @@
 import React, { useEffect } from "react";
 import { Link, useMatch, useResolvedPath } from "react-router-dom";
 import { BsFillCartFill } from "react-icons/bs";
-import CartContext from "../CartContext";
-import { useContext } from "react";
+
 import "./Navbar.css";
+import { useSelector } from "react-redux";
 
 const Navbar = ({ setSearchQuery, searchQuery }) => {
-  let cartCount = 0;
-  const { items } = useContext(CartContext);
-
-  useEffect(() => {
-    items.map((item) => {
-      cartCount += item.amount;
-    });
-  }, [items]);
+  const totalQuantity = useSelector((state) => state.cart.totalQuantity);
+  const totalAmount = useSelector((state) => state.cart.totalAmount);
 
   return (
     <nav className="navbar full-width">
@@ -37,7 +31,7 @@ const Navbar = ({ setSearchQuery, searchQuery }) => {
       <ul className="menu-list">
         <CustomLink to="/cart" className="menu-cart">
           <BsFillCartFill />
-          <span id="count">{cartCount}</span>
+          <span id="count">{`${totalQuantity} stk - ${totalAmount} kr`}</span>
         </CustomLink>
       </ul>
     </nav>
