@@ -1,11 +1,9 @@
 import React from "react";
 import Navbar from "./components/Navbar";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import Cart from "./pages/Cart";
 import { CartProvider } from "./CartContext";
-import { useContext } from "react";
-import CartContext from "./CartContext";
 import ProductList from "./components/ProductList";
 
 function App() {
@@ -27,7 +25,7 @@ function App() {
             </Routes>
           </div>
 
-          <div className="section">
+          <div className="section" id="section">
             <ProductList searchQuery={searchQuery} />
           </div>
 

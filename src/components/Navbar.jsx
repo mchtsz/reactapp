@@ -6,9 +6,8 @@ import { useContext } from "react";
 import "./Navbar.css";
 
 const Navbar = ({ setSearchQuery, searchQuery }) => {
-  const { items } = useContext(CartContext);
-
   let cartCount = 0;
+  const { items } = useContext(CartContext);
 
   useEffect(() => {
     items.map((item) => {
@@ -38,7 +37,7 @@ const Navbar = ({ setSearchQuery, searchQuery }) => {
       <ul className="menu-list">
         <CustomLink to="/cart" className="menu-cart">
           <BsFillCartFill />
-          <span>{cartCount}</span>
+          <span id="count">{cartCount}</span>
         </CustomLink>
       </ul>
     </nav>

@@ -33,6 +33,25 @@ code {
   z-index: 0;
 }
 
+.Addbtn {
+  font-size: 24px;
+  background-color: rgba(0, 0, 0, 0);
+  color: rgb(0, 0, 0);
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+#add:hover {
+  background-color: #000000;
+  color: #fff;
+}
+
+#add:active {
+  border: #42bfd8 3px solid;
+}
+
 .footer {
   display: none;
   text-align: center;
@@ -50,6 +69,7 @@ code {
   justify-content: center;
   grid-template-columns: repeat(2, 1fr);
   gap: 30px;
+  height: 1780px;
   padding: 25px;
   z-index: 10;
 }
@@ -61,7 +81,7 @@ code {
   text-align: center;
   justify-content: center;
   width: auto;
-  height: auto;
+  height: 800px;
   background-color: rgb(233, 233, 233);
   border-radius: 15px;
   z-index: 1;
@@ -93,6 +113,7 @@ code {
     grid-template-columns: repeat(2, 1fr);
     grid-auto-columns: max-content;
     margin: auto;
+    height: auto;
   }
 
   .product {
@@ -100,7 +121,7 @@ code {
   }
 
   .product img {
-    width: 100%;
+    max-width: 100%;
   }
 }
 

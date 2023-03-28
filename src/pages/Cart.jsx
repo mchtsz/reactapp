@@ -11,16 +11,11 @@ export default function Cart() {
       {cartContext.items.map((item) => {
         return (
           <div className="cart-item">
-            <div className="cart-item-name">id: {item.id}</div>
-            <div className="cart-item-name">{item.name}</div>
-            <div className="cart-item-name">{item.amount} stk</div>
-            <div className="cart-item-price">{item.price}</div>
-            <div className="cart-item-price">{item.image}</div>
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
+            <div className="cart-item-id row">id: {item.id}</div>
+            <div className="cart-item-name row">{item.name}</div>
+            <div className="cart-item-amount row">{item.amount} stk</div>
+            <div className="cart-item-price row">{item.price} kr</div>
+            <div className="cart-item-image row">{item.image}</div>
           </div>
         );
       })}

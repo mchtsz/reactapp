@@ -4,7 +4,7 @@ import { useContext } from "react";
 import CartContext from "../CartContext";
 import Addbtn from "./Addbtn";
 
-export default function ProductList({ searchQuery }) {
+export default function ProductList({ searchQuery, handleCount }) {
   const [displayableProducts, setDisplayableProducts] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage] = useState(4);
@@ -86,3 +86,10 @@ export default function ProductList({ searchQuery }) {
     </div>
   );
 }
+
+/* export const Add = () => {
+  let add = 0;
+  document.getElementById("add").addEventListener("click", () => {
+    add = 1;
+  });
+}; */
