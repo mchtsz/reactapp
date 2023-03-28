@@ -3,7 +3,7 @@ import Navbar from "./components/Navbar";
 import { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import Cart from "./pages/Cart";
-import ProductList from "./components/ProductList";
+import Home from "./pages/Home";
 
 function App() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -19,12 +19,9 @@ function App() {
           <Navbar setSearchQuery={setSearchQuery} searchQuery={searchQuery} />
 
           <Routes>
+            <Route path="/" element={<Home />} />
             <Route path="/cart" element={<Cart />} />
           </Routes>
-        </div>
-
-        <div className="section" id="section">
-          <ProductList searchQuery={searchQuery} />
         </div>
 
         <div className="footer">

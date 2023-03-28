@@ -44,15 +44,15 @@
 
 .navbar .menu-list {
   display: flex;
+  width: 100%;
   list-style: none;
+  flex-direction: row;
   flex: 1;
   justify-content: center;
   align-items: center;
-  font-size: 30px;
   margin: 0;
   margin-right: 50px;
   margin-left: 25px;
-  color: antiquewhite;
 }
 
 .navbar .menu-list a {
@@ -75,6 +75,16 @@
 
 .navbar .menu-link {
   cursor: pointer;
+}
+
+.count {
+  display: flex;
+  color: antiquewhite;
+  flex: 1;
+  font-size: 30px;
+  margin: 0;
+  flex-direction: row;
+  width: 100%;
 }
 
 @media only screen and (max-width: 1000px) {

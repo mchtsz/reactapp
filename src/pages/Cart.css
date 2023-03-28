@@ -1,5 +1,6 @@
 .cart-item {
   border: 1px solid #000;
+  gap: 2rem;
   display: flex;
   text-align: center;
   justify-content: space-between;
@@ -15,13 +16,19 @@
   display: flex;
   margin: 2rem auto;
   flex-direction: column;
-  width: 100%;
   max-width: 1200px;
 }
 
 .row {
+  display: flex;
+  justify-content: center;
   flex-direction: row;
   width: 100%;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
 }
 
 @media screen and (max-width: 800px) {

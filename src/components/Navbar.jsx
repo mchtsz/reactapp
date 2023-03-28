@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Link, useMatch, useResolvedPath } from "react-router-dom";
 import { BsFillCartFill } from "react-icons/bs";
 
@@ -31,7 +31,10 @@ const Navbar = ({ setSearchQuery, searchQuery }) => {
       <ul className="menu-list">
         <CustomLink to="/cart" className="menu-cart">
           <BsFillCartFill />
-          <span id="count">{`${totalQuantity} stk - ${totalAmount} kr`}</span>
+          <span
+            id="count"
+            className="count"
+          >{`${totalAmount} kr - ${totalQuantity} stk`}</span>
         </CustomLink>
       </ul>
     </nav>

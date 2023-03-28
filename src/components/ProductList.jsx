@@ -1,3 +1,4 @@
+import React from "react";
 import { useEffect, useState } from "react";
 import Pagination from "./Pagination";
 import { addItemToCart } from "../state/cartSlice";
