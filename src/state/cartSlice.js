@@ -49,7 +49,24 @@ export const cartSlice = createSlice({
       }
     },
 
-    deleteItem: (state, action) => {},
+    deleteItem: (state, action) => {
+      const { id } = action.payload;
+
+      const itemExists = state.items.find((item) => item.id === id);
+
+      console.log(itemExists.price);
+
+      if (itemExists) {
+        const quantityToRemove = itemExists.quantity;
+        const priceToRemove = itemExists.price * quantityToRemove;
+
+        state.totalAmount -= priceToRemove;
+
+        state.totalQuantity -= quantityToRemove;
+
+        state.items = state.items.filter((item) => item.id !== id);
+      }
+    },
   },
 });
 // Action creators are generated for each case reducer function

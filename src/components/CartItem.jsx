@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { BsTrashFill } from "react-icons/bs";
 import { useDispatch } from "react-redux";
-import { updateCartItem } from "../state/cartSlice";
-/* import { useDispatch } from "react-redux"; */
+import { deleteItem, updateCartItem } from "../state/cartSlice";
 
 export default function CartItem({ item }) {
   const itemQuantity = item.quantity;
@@ -17,7 +16,16 @@ export default function CartItem({ item }) {
   return (
     <div className="cart-item">
       <div className="slett row">
-        <button className="deletebtn">
+        <button
+          className="deletebtn"
+          onClick={() =>
+            dispatch(
+              deleteItem({
+                id: item.id,
+              })
+            )
+          }
+        >
           <BsTrashFill />
         </button>
       </div>

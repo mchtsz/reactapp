@@ -90,10 +90,3 @@ export default function ProductList({ searchQuery }) {
     </div>
   );
 }
-
-/* export const Add = () => {
-  let add = 0;
-  document.getElementById("add").addEventListener("click", () => {
-    add = 1;
-  });
-}; */
