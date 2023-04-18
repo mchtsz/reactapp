@@ -9,6 +9,7 @@ const initialState = {
 export const cartSlice = createSlice({
   name: "cart",
   initialState,
+
   reducers: {
     addItemToCart: (state, action) => {
       //Forventer at action.payload er type: {id: 12, quantity: 4, name: "Headset", price: 1200, img: "https://www.google.com/bilde.jpg"}
@@ -27,10 +28,31 @@ export const cartSlice = createSlice({
         state.totalAmount += itemToAdd.price * itemToAdd.quantity;
       }
     },
+
+    updateCartItem: (state, action) => {
+      // ta imot id og antall i format: {id: 12, quantity: 4}
+      const itemId = action.payload.id;
+      const itemQuantity = action.payload.quantity;
+
+      const itemExists = state.items.find((item) => item.id === itemId);
+
+      if (itemExists) {
+        const oldQuantity = itemExists.quantity;
+        const oldAmount = itemExists.price * oldQuantity;
+
+        itemExists.quantity = itemQuantity;
+        const addAmount = itemExists.price * itemQuantity;
+
+        // Oppdater totalQuantity og totalAmount
+        state.totalQuantity += itemQuantity - oldQuantity;
+        state.totalAmount += addAmount - oldAmount;
+      }
+    },
+
+    deleteItem: (state, action) => {},
   },
 });
-
 // Action creators are generated for each case reducer function
-export const { addItemToCart } = cartSlice.actions;
+export const { addItemToCart, deleteItem, updateCartItem } = cartSlice.actions;
 
 export default cartSlice.reducer;

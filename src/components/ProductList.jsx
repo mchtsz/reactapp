@@ -5,7 +5,7 @@ import { addItemToCart } from "../state/cartSlice";
 import Addbtn from "./Addbtn";
 import { useDispatch } from "react-redux";
 
-export default function ProductList({ searchQuery, handleCount }) {
+export default function ProductList({ searchQuery }) {
   const dispatch = useDispatch();
 
   const [displayableProducts, setDisplayableProducts] = useState([]);

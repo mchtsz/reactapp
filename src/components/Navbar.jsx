@@ -1,7 +1,6 @@
 import React from "react";
 import { Link, useMatch, useResolvedPath } from "react-router-dom";
 import { BsFillCartFill } from "react-icons/bs";
-
 import "./Navbar.css";
 import { useSelector } from "react-redux";
 
