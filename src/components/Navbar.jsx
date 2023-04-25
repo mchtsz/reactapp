@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, useMatch, useResolvedPath } from "react-router-dom";
-import { BsFillCartFill } from "react-icons/bs";
+import { BsCart } from "react-icons/bs";
 import "./Navbar.css";
 import { useSelector } from "react-redux";
 
@@ -28,12 +28,15 @@ const Navbar = ({ setSearchQuery, searchQuery }) => {
       </div>
 
       <ul className="menu-list">
+        <CustomLink to="/shop" className="menu-shop">
+          Shop
+        </CustomLink>
         <CustomLink to="/cart" className="menu-cart">
-          <BsFillCartFill />
-          <span
-            id="count"
-            className="count"
-          >{`${totalAmount} kr - ${totalQuantity} stk`}</span>
+          <div className="cart-container">
+            <BsCart className="cart-icon" />
+            <span id="count" className="count">{`${totalQuantity}`}</span>
+            <span className="cart-price">{`${totalAmount} kr`}</span>
+          </div>
         </CustomLink>
       </ul>
     </nav>

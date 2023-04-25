@@ -2,9 +2,9 @@ import React from "react";
 import Navbar from "./components/Navbar";
 import { useState } from "react";
 import { Route, Routes } from "react-router-dom";
-import Cart from "./pages/Cart";
 import Home from "./pages/Home";
-import Categories from "./pages/Categories";
+import Shop from "./pages/Shop";
+import Cart from "./pages/Cart";
 
 function App() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -21,8 +21,8 @@ function App() {
 
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/shop" element={<Shop />} />
             <Route path="/cart" element={<Cart />} />
-            <Route path="/categories" element={<Categories />} />
           </Routes>
         </div>
 

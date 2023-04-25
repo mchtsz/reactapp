@@ -1,6 +1,5 @@
 .navbar {
   display: flex;
-  padding: 20px 0 20px;
   align-items: center;
   width: 100%;
   background-color: rgb(30, 30, 30);
@@ -47,13 +46,11 @@
   display: flex;
   width: 100%;
   list-style: none;
-  flex-direction: row;
   flex: 1;
   justify-content: center;
   align-items: center;
   margin: 0;
   margin-right: 50px;
-  margin-left: 25px;
 }
 
 .navbar .menu-list a {
@@ -78,22 +75,73 @@
   cursor: pointer;
 }
 
-.count {
+.menu-list .menu-shop {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 26px;
+}
+
+.cart-container {
+  display: flex;
+  flex-direction: column;
+}
+.cart-icon {
   display: flex;
   color: antiquewhite;
-  flex: 1;
-  font-size: 26px;
+  font-size: 30px;
   margin: 0;
   width: 100%;
 }
 
-@media only screen and (max-width: 1000px) {
-  .navbar .menu-list {
+.count {
+  display: flex;
+  position: absolute;
+  top: 10px;
+  right: 8%;
+  background-color: antiquewhite;
+  border-radius: 50%;
+  width: 20px;
+  color: rgb(0, 0, 0);
+  justify-content: center;
+  text-align: center;
+  font-size: 12px;
+  margin: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+.cart-price {
+  display: flex;
+  justify-content: center;
+  color: antiquewhite;
+  font-size: 16px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .navbar .count {
     display: none;
   }
+}
 
-  .navbar {
+@media only screen and (max-width: 1000px) {
+  .navbar .logo {
     flex-direction: column;
+  }
+  .navbar .search-bar {
+    flex-direction: column;
+    max-width: 100%;
+    margin: 0 1rem;
+  }
+
+  .navbar .search-bar input {
+    font-size: 18px;
+    font-weight: 400;
+  }
+
+  .navbar .menu-list {
+    justify-content: row;
+    margin: 0;
   }
 
   .navbar .site-title {

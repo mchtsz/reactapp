@@ -1,13 +1,11 @@
 import React from "react";
-import { useState } from "react";
-import ProductList from "../components/ProductList";
-
+import Categories from "../components/Categories";
 export default function Home() {
-  const [searchQuery] = useState("");
-  //const cartContext will be selected from global state¨
+  //const cartContext will be selected from global state
   return (
     <div className="section" id="section">
-      <ProductList searchQuery={searchQuery} />
+      <h1>Home</h1>
+      <Categories />
     </div>
   );
 }

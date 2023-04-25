@@ -13,6 +13,7 @@
 
 .cart-item-image {
   width: auto;
+  height: auto;
 }
 
 .wrap {
@@ -74,6 +75,11 @@
   flex-direction: column;
 }
 
+.image {
+  width: 100px;
+  height: 100px;
+}
+
 @media screen and (max-width: 800px) {
   .cart-item {
     flex-direction: column;
@@ -87,12 +93,14 @@
   }
 
   .deletebtn > .slett-row {
-    margin: 0;
-    padding: 0;
+    width: 0;
     font-size: 20px;
   }
-  svg {
+  .slett-row svg {
+    display: flex;
+    text-align: center;
     padding: 0;
     margin: 0;
+    font-size: 20px;
   }
 }

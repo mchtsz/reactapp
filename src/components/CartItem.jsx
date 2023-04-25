@@ -61,7 +61,11 @@ export default function CartItem({ item }) {
       </div>
       <div className="cart-item-name row">{item.name}</div>
       <div className="cart-item-price">{itemTotal} kr</div>
-      <div className="cart-item-image row">{item.img}</div>
+      <img
+        className="cart-item-image row image"
+        src={item.img}
+        alt={item.name}
+      ></img>
     </div>
   );
 }
