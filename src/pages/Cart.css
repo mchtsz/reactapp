@@ -1,6 +1,6 @@
 .cart-item {
-  border: 1px solid #393939;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 8px;
+  border: 1px solid #d9d9d9;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 4px;
   border-radius: 1rem;
   gap: 2rem;
   padding: 3rem;
@@ -58,7 +58,7 @@
 
 .page-cart {
   display: flex;
-  margin: 2rem auto;
+  margin: 3rem auto;
   flex-direction: column;
   max-width: 1200px;
 }

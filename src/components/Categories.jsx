@@ -1,5 +1,6 @@
 // eslint-disable-next-line
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Categories() {
   const [categories, setCategories] = useState([]);
@@ -20,16 +21,29 @@ export default function Categories() {
 
     fetch(url, requestOptions)
       .then((response) => response.json())
-      .then((data) => console.log(data))
-      .then((data) => setCategories(data))
+      .then((data) => {
+        console.log(data);
+        return data;
+      })
+      .then((data) => {
+        setCategories(data);
+      })
       .catch((error) => console.error(error));
   }, []);
-  console.log(categories);
 
   return (
     <div className="section" id="section">
-      <div className="categories-container">
-        <ul className="categories-list"></ul>
+      <div className="categories-flex">
+        {categories.map((category) => {
+          return (
+            <div key={category.id} className="category">
+              <Link to={`${category.slug}`}>
+                <img src={category.image.src} alt="x" />
+                <p>{category.name}</p>
+              </Link>
+            </div>
+          );
+        })}
       </div>
     </div>
   );
