@@ -37,7 +37,7 @@ export default function Categories() {
         {categories.map((category) => {
           return (
             <div key={category.id} className="category">
-              <Link to={`${category.slug}`}>
+              <Link to={`/category/${category.slug}`}>
                 <img src={category.image.src} alt="x" />
                 <p>{category.name}</p>
               </Link>

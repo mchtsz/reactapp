@@ -38,6 +38,10 @@ code {
   color: #000000;
 }
 
+.categories-flex p {
+  margin-top: 10px;
+}
+
 .category {
   display: flex;
   flex-direction: column;
@@ -93,12 +97,12 @@ code {
   width: 100%;
 }
 
-#add:hover {
+.Addbtn:hover {
   background-color: #000000;
   color: #fff;
 }
 
-#add:active {
+.Addbtn:active {
   border: #42bfd8 3px solid;
 }
 

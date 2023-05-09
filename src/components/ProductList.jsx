@@ -1,13 +1,10 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import Pagination from "./Pagination";
-import { addItemToCart } from "../state/cartSlice";
-import Addbtn from "./Addbtn";
-import { useDispatch } from "react-redux";
+import Product from "./Product";
+
 
 export default function ProductList({ searchQuery }) {
-  const dispatch = useDispatch();
-
   const [displayableProducts, setDisplayableProducts] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage] = useState(4);
@@ -51,32 +48,7 @@ export default function ProductList({ searchQuery }) {
     <div className="Parent">
       <div className="productGrid">
         {currentPosts.map((product) => (
-          <div
-            key={product.id}
-            className="product"
-            onClick={() => {
-              dispatch(
-                addItemToCart({
-                  id: product.id,
-                  quantity: 1,
-                  name: product.name,
-                  price: product.price,
-                  img: product.images[0].src,
-                })
-              );
-            }}
-          >
-            <div className="products-container">
-              <img
-                className="product-image"
-                src={product.images[0].src}
-                alt={product.name}
-              />
-              <h2 className="product-title">{product.name}</h2>
-              <p className="product-price">{product.price} kr</p>
-            </div>
-            <Addbtn />
-          </div>
+          <Product key={product.id} product={product} />
         ))}
       </div>
 

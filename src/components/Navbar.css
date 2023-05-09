@@ -100,8 +100,8 @@
   display: flex;
   position: absolute;
   top: 14px;
-  right: 8%;
-  background-color: antiquewhite;
+  right: 8.6%;
+  background-color: var(--main);
   border-radius: 50%;
   width: 20px;
   color: rgb(0, 0, 0);

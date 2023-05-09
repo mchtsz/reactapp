@@ -4,8 +4,9 @@ export default function Home() {
   //const cartContext will be selected from global state
   return (
     <div className="homepage">
-      <h1>Homepage</h1>
+      <hr />
       <Categories />
+      <hr />
     </div>
   );
 }
