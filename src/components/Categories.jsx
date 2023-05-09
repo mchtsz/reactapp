@@ -23,6 +23,7 @@ export default function Categories() {
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
+        data.shift();
         return data;
       })
       .then((data) => {

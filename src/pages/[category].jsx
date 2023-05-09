@@ -32,8 +32,7 @@ export default function category() {
       })
       .catch((error) => console.error(error));
   }, []);
-
-  // dynamic routes, https://nextjs.org/docs/routing/dynamic-routes / display enten ID eller slug i URL.
+  
   return (
     <div className="section" id="section">
       <div className="productGrid">

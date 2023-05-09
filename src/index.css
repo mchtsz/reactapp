@@ -93,7 +93,15 @@ code {
 }
 
 .homepage {
+  margin: 1rem auto;
   width: 100%;
+}
+
+.homepage h2 {
+  font-family: var(--zenfont);
+  font-size: 30px;
+  text-align: center;
+  padding: 2rem;
 }
 
 .Addbtn:hover {
