@@ -22,11 +22,7 @@ export default function Categories() {
     fetch(url, requestOptions)
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
         data.shift();
-        return data;
-      })
-      .then((data) => {
         setCategories(data);
       })
       .catch((error) => console.error(error));

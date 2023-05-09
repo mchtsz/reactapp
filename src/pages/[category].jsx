@@ -24,10 +24,6 @@ export default function category() {
     fetch(url, requestOptions)
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
-        return data;
-      })
-      .then((data) => {
         setProducts(data);
       })
       .catch((error) => console.error(error));

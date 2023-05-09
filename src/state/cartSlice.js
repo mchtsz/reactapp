@@ -54,8 +54,6 @@ export const cartSlice = createSlice({
 
       const itemExists = state.items.find((item) => item.id === id);
 
-      console.log(itemExists.price);
-
       if (itemExists) {
         const quantityToRemove = itemExists.quantity;
         const priceToRemove = itemExists.price * quantityToRemove;
