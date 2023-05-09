@@ -32,6 +32,7 @@ export default function ProductList({ searchQuery }) {
       .then((data) => {
         if (searchQuery === "") {
           setDisplayableProducts(data);
+          return;
         } else {
           const filteredProducts = data.filter((product) => {
             return product.name

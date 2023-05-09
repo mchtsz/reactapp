@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "./components/Navbar";
 import { useState } from "react";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes} from "react-router-dom";
 import Home from "./pages/Home";
 import Shop from "./pages/Shop";
 import Cart from "./pages/Cart";
