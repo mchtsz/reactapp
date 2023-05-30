@@ -1,14 +1,13 @@
+import React from "react";
 import { useEffect, useState } from "react";
 import Pagination from "./Pagination";
-import { useContext } from "react";
-import CartContext from "../CartContext";
-import Addbtn from "./Addbtn";
+import Product from "./Product";
 
-export default function ProductList({ searchQuery, handleCount }) {
+
+export default function ProductList({ searchQuery }) {
   const [displayableProducts, setDisplayableProducts] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage] = useState(4);
-  const cartContext = useContext(CartContext);
 
   const lastPostIndex = currentPage * postsPerPage;
   const firstPostIndex = lastPostIndex - postsPerPage;
@@ -33,6 +32,7 @@ export default function ProductList({ searchQuery, handleCount }) {
       .then((data) => {
         if (searchQuery === "") {
           setDisplayableProducts(data);
+          return;
         } else {
           const filteredProducts = data.filter((product) => {
             return product.name
@@ -49,30 +49,7 @@ export default function ProductList({ searchQuery, handleCount }) {
     <div className="Parent">
       <div className="productGrid">
         {currentPosts.map((product) => (
-          <div
-            key={product.id}
-            className="product"
-            onClick={() =>
-              cartContext.addToCart(
-                product.id,
-                product.name,
-                1,
-                product.price,
-                product.images[0].src
-              )
-            }
-          >
-            <div className="products-container">
-              <img
-                className="product-image"
-                src={product.images[0].src}
-                alt={product.name}
-              />
-              <h2 className="product-title">{product.name}</h2>
-              <p className="product-price">{product.price} kr</p>
-            </div>
-            <Addbtn />
-          </div>
+          <Product key={product.id} product={product} />
         ))}
       </div>
 
@@ -86,10 +63,3 @@ export default function ProductList({ searchQuery, handleCount }) {
     </div>
   );
 }
-
-/* export const Add = () => {
-  let add = 0;
-  document.getElementById("add").addEventListener("click", () => {
-    add = 1;
-  });
-}; */

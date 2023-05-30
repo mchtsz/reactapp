@@ -1,6 +1,5 @@
 .navbar {
   display: flex;
-  padding: 20px 0 20px;
   align-items: center;
   width: 100%;
   background-color: rgb(30, 30, 30);
@@ -9,8 +8,9 @@
 
 .navbar .site-title {
   display: flex;
-  color: antiquewhite;
+  color: var(--main);
   text-decoration: none;
+  font-family: var(--zenfont);
   justify-content: center;
   align-content: center;
   font-size: 50px;
@@ -37,22 +37,20 @@
   border-radius: 16px;
   border: none;
   width: 80%;
-  height: 50px;
+  height: 60px;
   padding: 10px;
   font-size: 24px;
 }
 
 .navbar .menu-list {
   display: flex;
+  width: 100%;
   list-style: none;
   flex: 1;
   justify-content: center;
   align-items: center;
-  font-size: 30px;
   margin: 0;
   margin-right: 50px;
-  margin-left: 25px;
-  color: antiquewhite;
 }
 
 .navbar .menu-list a {
@@ -77,13 +75,74 @@
   cursor: pointer;
 }
 
-@media only screen and (max-width: 1000px) {
-  .navbar .menu-list {
+.menu-list .menu-shop {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 26px;
+}
+
+.cart-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-icon {
+  display: flex;
+  color: antiquewhite;
+  font-size: 30px;
+  margin: 0;
+  width: 100%;
+}
+
+.count {
+  display: flex;
+  position: absolute;
+  top: 14px;
+  right: 8.6%;
+  background-color: var(--main);
+  border-radius: 50%;
+  width: 20px;
+  color: rgb(0, 0, 0);
+  justify-content: center;
+  text-align: center;
+  font-size: 12px;
+  margin: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+.cart-price {
+  display: flex;
+  justify-content: center;
+  color: antiquewhite;
+  font-size: 16px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .navbar .count {
     display: none;
   }
+}
 
-  .navbar {
+@media only screen and (max-width: 1000px) {
+  .navbar .logo {
     flex-direction: column;
+  }
+  .navbar .search-bar {
+    flex-direction: column;
+    max-width: 100%;
+    margin: 0 1rem;
+  }
+
+  .navbar .search-bar input {
+    font-size: 18px;
+    font-weight: 400;
+  }
+
+  .navbar .menu-list {
+    justify-content: row;
+    margin: 0;
   }
 
   .navbar .site-title {

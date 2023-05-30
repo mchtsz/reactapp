@@ -1,27 +1,83 @@
 .cart-item {
-  border: 1px solid #000;
+  border: 1px solid #d9d9d9;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 4px;
+  border-radius: 1rem;
+  gap: 2rem;
+  padding: 3rem;
   display: flex;
   text-align: center;
   justify-content: space-between;
   align-items: center;
-  padding: 3rem;
+  margin-bottom: 8px;
 }
 
 .cart-item-image {
   width: auto;
+  height: auto;
+}
+
+.wrap {
+  display: flex;
+  background-color: #f8f9fa;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 8px;
+  border-radius: 2rem;
+  gap: 0;
+  z-index: 1;
+}
+
+.deletebtn {
+  background-color: transparent;
+  border: none;
+  width: 10px;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.btn-light {
+  z-index: 0;
+  border-radius: 1rem;
+}
+
+.slett {
+  cursor: pointer;
+  max-width: 10%;
+}
+
+.cart-item-price {
+  display: flex;
+  flex-direction: row;
+  width: 200px;
+}
+
+.input-group-text {
+  background-color: #f8f9fa;
+  border: none;
+  width: 100px;
 }
 
 .page-cart {
   display: flex;
-  margin: 2rem auto;
+  margin: 3rem auto;
   flex-direction: column;
-  width: 100%;
   max-width: 1200px;
 }
 
 .row {
+  display: flex;
+  justify-content: center;
   flex-direction: row;
   width: 100%;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.image {
+  width: 100px;
+  height: 100px;
 }
 
 @media screen and (max-width: 800px) {
@@ -29,5 +85,22 @@
     flex-direction: column;
     font-size: 14px;
     margin: 0 60px 0 60px;
+  }
+
+  .cart-item-price {
+    display: flex;
+    justify-content: center;
+  }
+
+  .deletebtn > .slett-row {
+    width: 0;
+    font-size: 20px;
+  }
+  .slett-row svg {
+    display: flex;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
   }
 }
